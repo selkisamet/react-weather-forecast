@@ -1,0 +1,123 @@
+.card-wrap {
+    max-width: 450px;
+    width: 100%;
+    margin: 50px auto;
+    position: relative;
+}
+
+.card {
+    color: #553D6A;
+    border-radius: 20px;
+    position: relative;
+    z-index: 20;
+    backdrop-filter: blur(50px);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    -webkit-box-shadow: 35px 35px 88px 0px rgba(145,45,165,0.15);
+    -moz-box-shadow: 35px 35px 88px 0px rgba(145,45,165,0.15);
+    box-shadow: 35px 35px 88px 0px rgba(145,45,165,0.15);
+}
+
+.card-white {
+    height: 200px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card .icon-forecast {
+    width: 100px;
+}
+
+.card .temp {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.card .city-name {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 25px;
+    text-transform: uppercase;
+}
+
+.card .description {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.card .detail-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 37px;
+    margin-bottom: 10px;
+}
+
+.card .details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card .details .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card .details .row .title {
+    font-weight: 600;
+}
+
+.card .details .row .value {
+    font-weight: 300;
+    width: 80px;
+    text-align: left;
+}
+
+.card-wrap .small-partial {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-image: linear-gradient(to right top, #d939ff, #cb41f3, #bd47e6, #b04ad9, #a34dcc, #8762dc, #6773e6, #4081eb, #009ff9, #00b9f6, #00cfe7, #0ce2d3);
+    opacity: 0.8;
+}
+
+.card-wrap .big-partial {
+    height: 280px;
+    width: 280px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background-image: linear-gradient(to right top, #d939ff, #cb41f3, #bd47e6, #b04ad9, #a34dcc, #8762dc, #6773e6, #4081eb, #009ff9, #00b9f6, #00cfe7, #0ce2d3);
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 576px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    .card-wrap .small-partial {
+        top: 0;
+        left: 0;
+        opacity: 1;
+    }
+
+    .card-wrap .big-partial {
+        right: 0;
+        bottom: 0;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,96 @@
+.forecast-title {
+    color: #7C7C7C;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.days {
+    display: flex;
+    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.day {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    height: 180px;
+    width: 180px;
+    border-radius: 20px;
+    flex: 1;
+    position: relative;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+    .days{
+        flex-direction: column;
+    }
+    .day {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+.day .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    padding-top: 10px;
+}
+
+.day .overlay .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    gap: 5px;
+}
+
+.day .overlay .row .title {
+    font-weight: 600;
+}
+
+.day:hover .overlay {
+    border-radius: 20px;
+    backdrop-filter: blur(7px);
+    visibility: visible;
+    opacity: 1;
+}
+
+.day .icon-forecast {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
+}
+
+.day .temp {
+    color: #7C7C7C;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.day .description {
+    color: #7C7C7C;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.day .day-name {
+    color: #7C7C7C;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+}

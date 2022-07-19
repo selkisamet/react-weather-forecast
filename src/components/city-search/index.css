@@ -1,0 +1,45 @@
+  label {
+      display: block;
+      font-size: 18px;
+      font-weight: 600;
+      color: #7C7C7C;
+  }
+
+  .select-box {
+      max-width: 300px;
+      width: 100%;
+      margin: 50px auto 0 auto;
+  }
+
+  .select {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      position: relative;
+      border: solid 1px #7C7C7C;
+      margin-top: 10px;
+  }
+
+  .select::after {
+      content: "";
+      width: 15px;
+      height: 10px;
+      background-color: #7C7C7C;
+      clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+      position: absolute;
+      right: 10px;
+  }
+
+  select {
+      appearance: none;
+      background-color: transparent;
+      padding: 1rem;
+      margin: 0;
+      font-family: inherit;
+      font-size: inherit;
+      cursor: inherit;
+      line-height: inherit;
+      outline: none;
+      width: 100%;
+      border: none;
+  }
